@@ -1,33 +1,14 @@
 import React from 'react'
-import axios from 'axios'
-import { Header } from '../../components'
-import { FooterComponent } from '../../components/Footer'
+import { Header, FooterComponent, OptionsQrCode } from '../../components'
 import { Container, Content } from '../../components/globalStyledComponets'
 import { useHooks } from '../../hooks/useHooks'
-import { setData } from '../../redux/modules/myData'
 import { StyledIconDownload, StyledTextField, StyledTypography, ButtonDownload } from './styles'
 import QRcode from 'qrcode.react'
 
 export function GeneratorPage() {
 
-  const { dispatch, display } = useHooks()
+  const { display } = useHooks()
   const [qr, setQr] = React.useState('')
-
-  React.useEffect(() => {
-    axios.get("https://api.github.com/users/CaioHAlves")
-    .then((response) => {
-      const { data } = response
-      dispatch(setData({
-        name: data.name,
-        avatar_url: data.avatar_url,
-        company: data.company
-      }))
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   const handleChange = (event: { target: { value: React.SetStateAction<string> } }) => {
     setQr(event.target.value);
@@ -51,7 +32,10 @@ export function GeneratorPage() {
   return (
     <Container>
       <Header/>
-      <Content>
+      <OptionsQrCode/>
+      <Content
+        padding='0px 24px'
+      >
         <StyledTextField
           onChange={handleChange}
           value={qr} 
@@ -77,7 +61,7 @@ export function GeneratorPage() {
               </ButtonDownload>
             </>
             :
-            <StyledTypography>Digite algo no campo acima para gerar QR code</StyledTypography>
+            <StyledTypography>Digite algo no campo acima <br/> para gerar QR Code</StyledTypography>
           }
         </div>
       </Content>

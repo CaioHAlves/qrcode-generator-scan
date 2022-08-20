@@ -6,7 +6,8 @@ import { StyledProps } from '../../theme/styledProps'
 
 export const StyledTypography = styled(Typography)`
   &.MuiTypography-root {
-    color: ${theme.palette.primary.dark}
+    color: ${theme.palette.primary.dark};
+    text-align: center;
   }
 `
 export const StyledTextField = styled(TextField)`
