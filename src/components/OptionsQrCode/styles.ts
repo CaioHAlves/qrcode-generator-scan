@@ -10,7 +10,7 @@ export const DivOptions = styled.div<StyledProps>`
   height: 50px;
   justify-content: space-between;
   gap: 5px;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 20px 0px;
 `
 
 export const StyledButton = styled(Button)`

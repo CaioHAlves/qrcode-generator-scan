@@ -14,7 +14,7 @@ export const StyledTextField = styled(TextField)`
   &.MuiTextField-root {
     width: 300px;
     height: 48px;
-    margin: 40px 0px 40px 0px;
+    margin: 5px 0px 40px 0px;
   }
   .MuiOutlinedInput-input, .MuiInputLabel-outlined, legend {
     color: ${theme.palette.primary.dark};

@@ -57,7 +57,7 @@ export const MyName = styled.h4`
     padding-inline: 10px;
     opacity: 0;
     transform-origin: 10% 75%;
-    animation: rotateWords 8s linear infinite;
+    animation: rotateWords 8s linear;
 
     @keyframes rotateWords {
       5% {
