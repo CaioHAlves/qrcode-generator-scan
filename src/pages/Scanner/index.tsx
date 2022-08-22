@@ -12,7 +12,8 @@ export function ScannerPage() {
   const [qrcodeState, setQrcodeState] = React.useState<string>('')
 
   const dataQrcode = (qrcode: any) => {
-    if (qrcode && qrcodeState !== '') {
+    if (qrcode) {
+      console.log(qrcode)
       setQrcodeState(qrcode)
     }
   }
@@ -30,8 +31,7 @@ export function ScannerPage() {
           delay={300}
           onError={dataQrcode}
           onScan={errorScan}
-          style={{ width: 300, height: 300 }}
-          className="qrcode-scann"
+          style={{ width: 240, height: 240 }}
         />
         <TextArea
           defaultValue={qrcodeState}

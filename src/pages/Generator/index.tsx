@@ -49,7 +49,7 @@ export function GeneratorPage() {
               <QRcode
                 id="qrcode"
                 value={qr}
-                size={320}
+                size={300}
                 includeMargin={true}
               />
               <ButtonDownload
