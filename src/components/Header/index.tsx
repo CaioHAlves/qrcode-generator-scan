@@ -5,7 +5,7 @@ import { HeaderComponent, OptionsDiv, StyledButton, MyName } from './styles'
 export function Header() {
 
   const returnToSite = () => {
-    window.open("https://caiohalves.netlify.app")
+    window.open("caiohalves.pages.dev")
   }
 
   return (
