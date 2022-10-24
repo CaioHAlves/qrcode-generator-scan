@@ -5,7 +5,7 @@ import { HeaderComponent, OptionsDiv, StyledButton, MyName } from './styles'
 export function Header() {
 
   const returnToSite = () => {
-    window.open("https://caiohalves.pages.dev")
+    window.open("https://caiohalves.vercel.app")
   }
 
   return (
