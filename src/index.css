@@ -1,19 +1,16 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
+  background: #0D0D0D;
+  color: #FFFFFF;
 }
 
 #root {
   width: 100vw;
   height: 100vh;
-  /* background: #101010fa; */
-
-  /* background: rgb(71,65,156);
-  background: radial-gradient(circle, rgba(71,65,156,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,0) 100%); */
-  background: rgb(71,65,156);
-  background: radial-gradient(circle, rgba(71,65,156,1) 0%, rgba(24,21,59,1) 100%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(135deg, #0D0D0D 0%, #1A1A2E 50%, #0D0D0D 100%);
 }
 
 * {
@@ -21,4 +18,40 @@ html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+a {
+  color: #00F0FF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #FCEE0A;
+  text-shadow: 0 0 10px #FCEE0A;
+}
+
+/* Scrollbar Cyberpunk Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00F0FF, #FCEE0A);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FCEE0A, #FF2A6D);
+}
+
+/* Selection Style */
+::selection {
+  background: #00F0FF;
+  color: #0D0D0D;
 }

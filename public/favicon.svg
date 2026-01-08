@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Neon glow filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Yellow glow -->
+    <filter id="yellowGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#FCEE0A" flood-opacity="0.8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0D0D0D"/>
+
+  <!-- Cyberpunk corner cuts -->
+  <polygon points="0,0 12,0 0,12" fill="#00F0FF" opacity="0.3"/>
+  <polygon points="64,64 52,64 64,52" fill="#00F0FF" opacity="0.3"/>
+
+  <!-- Border frame -->
+  <path d="M8,2 L56,2 L62,8 L62,56 L56,62 L8,62 L2,56 L2,8 Z"
+        fill="none"
+        stroke="#00F0FF"
+        stroke-width="1.5"
+        opacity="0.6"/>
+
+  <!-- Letter C with cyberpunk style -->
+  <text x="32" y="46"
+        font-family="Arial Black, sans-serif"
+        font-size="40"
+        font-weight="900"
+        text-anchor="middle"
+        fill="#FCEE0A"
+        filter="url(#yellowGlow)">C</text>
+
+  <!-- Accent dot -->
+  <circle cx="52" cy="12" r="3" fill="#FCEE0A" filter="url(#yellowGlow)"/>
+
+  <!-- Scan line effect -->
+  <line x1="2" y1="32" x2="62" y2="32" stroke="#00F0FF" stroke-width="0.5" opacity="0.3"/>
+</svg>

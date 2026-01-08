@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './route'
 import Theme from './theme/theme'
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from './redux'
-import { notificaAirbrake } from './Airbrake'
+// import { notificaAirbrake } from './Airbrake'
 
 function App() {
 
-  useEffect(() => {
-    notificaAirbrake()
-  }, [])
+  // useEffect(() => {
+  //   notificaAirbrake()
+  // }, [])
 
   return (
     <Provider store={store}>
